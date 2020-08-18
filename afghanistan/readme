@@ -1,1 +1,2 @@
-asdf
+We need 
+afgsims<-replicate(10000,autoafg()) from this folder...
