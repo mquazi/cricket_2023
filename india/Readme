@@ -1,1 +1,3 @@
 This folder is for India files only
+We need 
+indsims<-replicate(10000,autoind()) from this file...
