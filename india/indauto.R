@@ -1,15 +1,11 @@
 
-install.packages("zoo")
-install.packages("tidyverse")
-library(tidyverse)
-library(zoo)
+install.packages("tictoc")
+library(tictoc)
+install.packages("stringr")
+library(stringr)
 install.packages("sampling")
 library(sampling)
-install.packages("survey")
-library(survey)
 
-install.packages("SDaA")
-library(SDaA)
 
 ############# function ###########
 f<-function(xave,yhs){
@@ -34,14 +30,11 @@ f<-function(xave,yhs){
         list(kk)
 }
 ############# function ###########
-set.seed(123)
-f(ave[11,1],l3[11,1])[[1]]
-f(ave[11,1],l3[11,1])
-f(ave[4,1],l3[4,1])
 
 
 
-inddat<-read.csv("/Users/quazi/Desktop/cric/india.csv",header=T)
+
+inddat<-read.csv("C:\\Users\\mquazi\\Desktop\\cric\\india.csv",header=T)
 head(inddat)
 str(inddat)
 i1<-inddat[1:16,]
@@ -130,8 +123,9 @@ list(scores=scores)
 
 autoind()
 
-
-indsims<-replicate(5,autoind())
+tic()
+indsims<-replicate(2000,autoind())
+toc()
 indsims[[1]][5]
 indsims
 ia<-data.frame(matrix(unlist(indsims), nrow=length(indsims), byrow=T))
