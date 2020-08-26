@@ -1,3 +1,34 @@
+install.packages("tictoc")
+library(tictoc)
+install.packages("stringr")
+library(stringr)
+install.packages("sampling")
+library(sampling)
+
+
+############# function ###########
+f<-function(xave,yhs){
+  beta<-seq(0.01,5000,0.01)
+  alpha<-xave/(beta)
+  #gg<-qgamma(0.95, alpha, beta )
+  #gg
+  #alpha<-35/0.93
+  #alpha
+  gg<-pgamma(yhs, alpha, scale=beta)
+  
+  
+  #str(mm)
+  #which(mm[,2]==95)
+  gg<-trunc(gg*10^2)/10^2
+  #which(gg==0.95)[1]
+  #max(gg)
+  #gg[226:260]
+  beta<-beta[which(gg==0.95 | gg==0.96 | gg==0.97 | gg==0.98 | gg==0.99)[1]]
+  alpha<-xave/beta
+  kk<-rgamma(1,alpha,scale=beta)
+  list(kk)
+}
+############# function ###########
 
 
 inddat<-read.csv("/Users/quazi/Desktop/cric/pak.csv",header=T)
