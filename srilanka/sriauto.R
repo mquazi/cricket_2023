@@ -131,6 +131,9 @@ colnames(ska)<-c("v Afghanistan","v Australia", "v Bangladesh","v Bermuda", "v C
                 "v Hong Kong","v India","v Ireland","v Kenya","v Netherlands",
                 "v New Zealand", "v Pakistan","v Scotland", "v South Africa", "v U.A.E.", 
                 "v West Indies", "v Zimbabwe")
+setwd("/Users/quazi/Desktop/cric")
+write.csv(ska,'ska.csv')
+
 ed$`v India`
 ia$`v England`
 bh$`v India`
