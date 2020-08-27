@@ -31,7 +31,7 @@ f<-function(xave,yhs){
 ############# function ###########
 
 
-inddat<-read.csv("C:\\Users\\mquazi\\Desktop\\cric\\australia.csv",header=T)
+inddat<-read.csv("/Users/quazi/Desktop/cric/australia.csv",header=T)
 head(inddat)
 str(inddat)
 ttt<-nrow(inddat)/2   #total teams
@@ -122,7 +122,7 @@ autoaus<-function(){
 autoaus()
 
 
-aussims<-replicate(2000,autoaus())
+aussims<-replicate(5,autoaus())
 aussims[[1]][5]
 
 aa<-data.frame(matrix(unlist(aussims), nrow=length(aussims), byrow=T))
@@ -131,6 +131,8 @@ colnames(aa)<-c("v Afghanistan","v Bangladesh",   "v England",
                 "v Hong Kong","v India","v Ireland","v Kenya","v Netherlands", "v New Zealand" ,
                 "v Pakistan", "v South Africa", "v Sri Lanka", "v U.A.E.", 
                 "v West Indies", "v Zimbabwe")
+setwd("/Users/quazi/Desktop/cric")
+write.csv(aa,'aa.csv')
 aa
 ia
 ed
