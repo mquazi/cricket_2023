@@ -130,7 +130,10 @@ colnames(ze)<-c("v Afghanistan","v Australia", "v Bangladesh","v Bermuda", "v Ca
                 "v England",
                 "v Hong Kong","v India","v Ireland","v Kenya","v Netherlands",
                 "v New Zealand", "v Pakistan","v Scotland", "v South Africa", 
-                "v Sri Lanka" ,"v U.A.E.","v West Indies" )
+                "v Sri Lanka" ,"v U.A.E.","v West Indies")
+setwd("/Users/quazi/Desktop/cric")
+write.csv(ze,'ze.csv')
+
 ed$`v India`
 ia$`v England`
 bh$`v India`
