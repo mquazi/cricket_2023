@@ -34,7 +34,7 @@ f<-function(xave,yhs){
 
 
 
-inddat<-read.csv("C:\\Users\\mquazi\\Desktop\\cric\\india.csv",header=T)
+inddat<-read.csv("/Users/quazi/Desktop/cric/india.csv",header=T)
 head(inddat)
 str(inddat)
 i1<-inddat[1:16,]
@@ -120,20 +120,20 @@ scores<-colSums(score)
 list(scores=scores)
 }
 
-
 autoind()
-
 tic()
-indsims<-replicate(2000,autoind())
+indsims<-replicate(5,autoind())
 toc()
 indsims[[1]][5]
-indsims
 ia<-data.frame(matrix(unlist(indsims), nrow=length(indsims), byrow=T))
 ia
 colnames(ia)<-c("v Afghanistan","v Australia","v Bangladesh",   "v England",
                 "v Hong Kong","v Ireland","v Kenya","v Netherlands", "v New Zealand" ,
                 "v Pakistan", "v South Africa", "v Sri Lanka", "v U.A.E.", 
                 "v West Indies", "v Zimbabwe")
+setwd("/Users/quazi/Desktop/cric")
+write.csv(ia,'ia.csv')
+
 ia$`v England`
 ia[,4]
 ed[,7]
