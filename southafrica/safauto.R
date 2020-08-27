@@ -90,7 +90,6 @@ autosaf<-function(){
                 l1<-ifelse((r1<r2) | (r1==r2), max(r1,r2+15), r1)
                 l2[i]<-list(l1)
         }
-        #l2
         l3<-data.frame(matrix(unlist(l2), nrow=n, byrow=T))
         #l3
         
@@ -106,7 +105,7 @@ autosaf<-function(){
                 }
                 l5[i]<-list(l4)
         }
-        
+        #l5
         score<-data.frame(matrix(unlist(l5), nrow=n, byrow=T))
         #score
         #ave
@@ -122,6 +121,7 @@ autosaf<-function(){
 autosaf()
 
 
+
 safsims<-replicate(5,autosaf())
 safsims[[1]][5]
 sa<-data.frame(matrix(unlist(safsims), nrow=length(safsims), byrow=T))
@@ -131,6 +131,10 @@ colnames(sa)<-c("v Afghanistan","v Australia", "v Bangladesh","v Bermuda", "v Ca
                 "v Hong Kong","v India","v Ireland","v Kenya","v Netherlands",
                 "v New Zealand", "v Pakistan","v Scotland", "v Sri Lanka", "v U.A.E.", 
                 "v West Indies", "v Zimbabwe")
+setwd("/Users/quazi/Desktop/cric")
+write.csv(sa,'sa.csv')
+
+
 ed$`v India`
 ia$`v England`
 bh$`v India`
