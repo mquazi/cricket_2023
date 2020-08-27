@@ -31,7 +31,7 @@ f<-function(xave,yhs){
 ############# function ###########
 
 
-inddat<-read.csv("C:\\Users\\mquazi\\Desktop\\cric\\eng.csv",header=T)
+inddat<-read.csv("/Users/quazi/Desktop/cric/eng.csv",header=T)
 head(inddat)
 str(inddat)
 ttt<-nrow(inddat)/2   #total teams
@@ -122,7 +122,7 @@ autoeng<-function(){
 autoeng()
 
 
-engsims<-replicate(2000,autoeng())
+engsims<-replicate(5,autoeng())
 
 ed<-data.frame(matrix(unlist(engsims), nrow=length(engsims), byrow=T))
 ed
@@ -131,6 +131,9 @@ colnames(ed)<-c("v Afghanistan","v Australia","v Bangladesh",   "v Bermuda", "v 
                 "v New Zealand" ,
                 "v Pakistan", "v Scotland","v South Africa", "v Sri Lanka", "v U.A.E.", 
                 "v West Indies", "v Zimbabwe")
+setwd("/Users/quazi/Desktop/cric")
+write.csv(ed,'ed.csv')
+
 ed$`v India`
 ia$`v England`
 
