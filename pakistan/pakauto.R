@@ -1,8 +1,8 @@
-#install.packages("tictoc")
+install.packages("tictoc")
 library(tictoc)
-#install.packages("stringr")
+install.packages("stringr")
 library(stringr)
-#install.packages("sampling")
+install.packages("sampling")
 library(sampling)
 
 
