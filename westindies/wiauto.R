@@ -1,8 +1,8 @@
-install.packages("tictoc")
+#install.packages("tictoc")
 library(tictoc)
-install.packages("stringr")
+#install.packages("stringr")
 library(stringr)
-install.packages("sampling")
+#install.packages("sampling")
 library(sampling)
 
 
@@ -31,7 +31,7 @@ f<-function(xave,yhs){
 ############# function ###########
 
 
-inddat<-read.csv("/Users/quazi/Desktop/cric/wi.csv",header=T)
+inddat<-read.csv("/users/dattap/cricket_2020/westindies/wi.csv",header=T)
 head(inddat)
 str(inddat)
 ttt<-nrow(inddat)/2   #total teams
@@ -131,7 +131,7 @@ colnames(ws)<-c("v Afghanistan","v Australia", "v Bangladesh","v Bermuda", "v Ca
                  "v Hong Kong","v India","v Ireland","v Kenya","v Netherlands",
                  "v New Zealand", "v Pakistan","v Scotland", "v South Africa", 
                 "v Sri Lanka" ,"v U.A.E." , "v Zimbabwe")
-setwd("/Users/quazi/Desktop/cric")
+setwd("/users/dattap/cricket_2020/westindies/")
 write.csv(ws,'ws.csv')
 
 ed$`v India`
