@@ -1,8 +1,8 @@
-install.packages("tictoc")
+#install.packages("tictoc")
 library(tictoc)
-install.packages("stringr")
+#install.packages("stringr")
 library(stringr)
-install.packages("sampling")
+#install.packages("sampling")
 library(sampling)
 
 
@@ -133,15 +133,3 @@ colnames(sa)<-c("v Afghanistan","v Australia", "v Bangladesh","v Bermuda", "v Ca
                 "v West Indies", "v Zimbabwe")
 setwd("/users/dattap/cricket_2020/southafrica/")
 write.csv(sa,'sa.csv')
-
-
-ed$`v India`
-ia$`v England`
-bh$`v India`
-ia$`v Bangladesh`
-nd$`v India`
-ia$`v New Zealand`
-pn$`v India`
-ia$`v Pakistan`
-ia$`v South Africa`
-sa$`v India`

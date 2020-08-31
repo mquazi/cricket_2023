@@ -1,9 +1,9 @@
 
-install.packages("tictoc")
+#install.packages("tictoc")
 library(tictoc)
-install.packages("stringr")
+#install.packages("stringr")
 library(stringr)
-install.packages("sampling")
+#install.packages("sampling")
 library(sampling)
 
 
@@ -133,54 +133,4 @@ colnames(ia)<-c("v Afghanistan","v Australia","v Bangladesh",   "v England",
                 "v West Indies", "v Zimbabwe")
 setwd("/users/dattap/cricket_2020/india/")
 write.csv(ia,'ia.csv')
-
-ia$`v England`
-ia[,4]
-ed[,7]
-ia[,4]<ed[,7]
-
-
-################################checking ################################
-
-is(vv[,1]=cc[,1])
-vv==cc
-vv<cc
-vv
-vv
-cc
-
-max(hs[,1])
-
-beta<-seq(0.01,5000,0.01)
-alpha<-19/(beta)
-alpha
-gg<-pgamma(209, alpha, scale=beta)
-gg
-gg<-trunc(gg*10^2)/10^2
-max(gg)
-min(gg)
-beta<-beta[which(gg==0.95 | gg==0.96 | gg==0.97 | gg==0.98 | gg==0.99)][[1]]
-alpha<-19/beta
-beta
-alpha
-kk<-rgamma(1000,alpha,scale=beta)
-kk
-
-class(as.vector(hs[,1]))
-
-hs
-ave
-beta<-beta[which(gg==0.95)[1]]
-
-hist(kk)
-mean(kk)
-min(kk)
-max(kk)
-
-x<-N(35,17)
-gg[93]
-beta[93]
-#### You do not need this part ###########
-
-
 
