@@ -122,7 +122,7 @@ autoeng<-function(){
 autoeng()
 
 
-engsims<-replicate(5,autoeng())
+engsims<-replicate(1000,autoeng())
 
 ed<-data.frame(matrix(unlist(engsims), nrow=length(engsims), byrow=T))
 ed

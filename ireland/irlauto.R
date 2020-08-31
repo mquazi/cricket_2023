@@ -122,7 +122,7 @@ autoirl<-function(){
 autoirl()
 
 
-irlsims<-replicate(5,autoirl())
+irlsims<-replicate(1000,autoirl())
 irlsims[[1]][5]
 id<-data.frame(matrix(unlist(irlsims), nrow=length(irlsims), byrow=T))
 id

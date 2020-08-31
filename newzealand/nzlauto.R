@@ -122,7 +122,7 @@ autonzl<-function(){
 autonzl()
 
 
-nzlsims<-replicate(5,autonzl())
+nzlsims<-replicate(1000,autonzl())
 nzlsims[[1]][5]
 nd<-data.frame(matrix(unlist(nzlsims), nrow=length(nzlsims), byrow=T))
 nd

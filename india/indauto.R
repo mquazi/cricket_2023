@@ -122,7 +122,7 @@ list(scores=scores)
 
 autoind()
 tic()
-indsims<-replicate(5,autoind())
+indsims<-replicate(1000,autoind())
 toc()
 indsims[[1]][5]
 ia<-data.frame(matrix(unlist(indsims), nrow=length(indsims), byrow=T))

@@ -122,7 +122,7 @@ autoban<-function(){
 autoban()
 
 
-bansims<-replicate(5,autoban())
+bansims<-replicate(1000,autoban())
 bansims[[1]][5]
 bh<-data.frame(matrix(unlist(bansims), nrow=length(bansims), byrow=T))
 bh

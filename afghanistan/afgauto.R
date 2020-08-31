@@ -122,7 +122,7 @@ autoafg<-function(){
 autoafg()
 
 
-afgsims<-replicate(5,autoafg())
+afgsims<-replicate(1000,autoafg())
 afgsims[[1]][5]
 an<-data.frame(matrix(unlist(afgsims), nrow=length(afgsims), byrow=T))
 an

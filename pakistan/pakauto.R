@@ -122,7 +122,7 @@ autopak<-function(){
 autopak()
 
 
-paksims<-replicate(5,autopak())
+paksims<-replicate(1000,autopak())
 paksims[[1]][5]
 pn<-data.frame(matrix(unlist(paksims), nrow=length(paksims), byrow=T))
 pn

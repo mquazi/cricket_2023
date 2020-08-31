@@ -122,7 +122,7 @@ autosri<-function(){
 autosri()
 
 
-srisims<-replicate(5,autosri())
+srisims<-replicate(1000,autosri())
 srisims[[1]][5]
 ska<-data.frame(matrix(unlist(srisims), nrow=length(srisims), byrow=T))
 ska

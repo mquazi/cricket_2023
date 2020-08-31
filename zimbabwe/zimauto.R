@@ -122,7 +122,7 @@ autozim<-function(){
 autozim()
 
 
-zimsims<-replicate(5,autozim())
+zimsims<-replicate(1000,autozim())
 zimsims[[1]][5]
 ze<-data.frame(matrix(unlist(zimsims), nrow=length(zimsims), byrow=T))
 ze

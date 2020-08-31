@@ -122,7 +122,7 @@ autosaf()
 
 
 
-safsims<-replicate(5,autosaf())
+safsims<-replicate(1000,autosaf())
 safsims[[1]][5]
 sa<-data.frame(matrix(unlist(safsims), nrow=length(safsims), byrow=T))
 sa

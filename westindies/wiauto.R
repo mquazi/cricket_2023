@@ -122,7 +122,7 @@ autowi<-function(){
 autowi()
 
 
-wisims<-replicate(5,autowi())
+wisims<-replicate(1000,autowi())
 wisims[[1]][5]
 ws<-data.frame(matrix(unlist(wisims), nrow=length(wisims), byrow=T))
 ws

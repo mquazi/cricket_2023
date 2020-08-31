@@ -122,7 +122,7 @@ autoaus<-function(){
 autoaus()
 
 
-aussims<-replicate(5,autoaus())
+aussims<-replicate(1000,autoaus())
 aussims[[1]][5]
 
 aa<-data.frame(matrix(unlist(aussims), nrow=length(aussims), byrow=T))
