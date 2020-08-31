@@ -1,7 +1,15 @@
 #!/bin/bash
+#PBS -q default
+#PBS -l walltime=24:00:00,nodes=2:ppn=8
+#PBS -M dattap@unm.edu
+#PBS -m abe
+#PBS -N cricket_2020_sampling
+#PBS -o /users/dattap/cricket_2020/output_file
+#PBS -e /users/dattap/cricket_2020/error_file
 
 #load R module
-load module r-4.0.2-gcc-9.3.0-python3-krncrvc
+module load r-4.0.2-gcc-9.3.0-python3-krncrvc
+sleep 10
 
 #list of commands
 R -e 'source("/users/dattap/cricket_2020/afghanistan/afgauto.R")' &
