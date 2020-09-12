@@ -34,9 +34,7 @@
 	\fancyhead{} % eliminates all header used elsewhere
 	\renewcommand{\footrulewidth}{0.4pt}   % a thin line to separate main text and footer
 	\fancyfoot[L]{\footnotesize 
-		\footnote{a}Mohammed Quazi, Department of Mathematics and Statistics, University of New Mexico\\
-		\footnote{b}Pavan Datta, Sandia National Laboratories\\
-		\footnote{c}Joshua Clifford, Sandia National Laboratories
+		\footnote{a}Department of Mathematics and Statistics, University of New Mexico
 	}
 	\fancyfoot[C]{\footnotesize }	  
 	%\fancyfoot[R]{\footnotesize \thepage} 	
@@ -88,7 +86,7 @@
 %		[2mm] % YOU CAN USE MULTIPLE LINES
 %				in Survey Data} } \\[6mm] % BIGGER GAP NEEDED HERE, DO NOT CHANGE
 		\normalsize
-		{\bf Mohammed Quazi$^{*}$, Pavan Datta$^{\dagger}$, Joshua Clifford$^{\ddagger}$} \\
+		{\bf Mohammed Quazi$^{*}$, Pavan Datta$^{*}$, Joshua Clifford$^{*}$} \\
 %		{\it Department of Mathematics and Statistics \\
 %			University of New Mexico, Albuquerque, New Mexico, USA} \\[6mm] % BIGGER GAP NEEDED, DO NOT CHANGE
 		
@@ -122,17 +120,17 @@
 		live coverage, a 38\% increase over the 2015 edition. This research develops a statistical
 		modeling procedure to predict outcomes of future ICC cricket events. The proposed
 		model provides an insight into the application of survey sampling to the team selection
-		pattern by incorporating individual player’s performance history not only against a
+		pattern by incorporating individual players' performance history not only against a
 		particular opposition but also against any cricket-playing nation (full member of ICC).
-		A case study for the next ICC CWC 2023 in India is provided and simulations are
+		A case study for the next ICC CWC 2023 in India is provided, and simulation results are
 		discussed.  
 	\section*{Methods}\label{method}
-		This study employs stratified random sampling  (SRS) technique shown in figure \ref{samplingscheme} to select team lineups based on player roles. \textit{S1-S6} denote different types of players based on their role in the team - fast bowler, spinner, all-rounder-fast bowler, all-rounder-spinner, batsman, wicket-keeper. Runs scored by every player on the team is derived using an algorithm which is based off of estimated parameters of a gamma distribution against a particular opposition, which is then used to simulate match and tournament results. Data collected spans over 11000 individual one-day international (ODI) innings which cover every competitive game played among the full members of ICC since 1999. 195 international players are considered for the case study. The proposed model accounts for the Indian subcontinent playing conditions and debutants' performances as well. 
+		This study employs stratified random sampling  (SRS) technique shown in Figure \ref{samplingscheme} to select team lineups based on player roles. \textit{S1-S6} denote different types of players based on their role in the team - fast bowler, spinner, all-rounder-fast bowler, all-rounder-spinner, batsman, wicket-keeper. Runs scored by each player on the team is derived using an algorithm based off of estimating parameters of a gamma distribution against a particular opposition, which is then used to simulate match and tournament results. Web scraped data collected spans over 11000 individual one-day international (ODI) innings that cover every competitive game played among the full members of ICC since 1999. 195 international players are considered for the case study. The proposed model accounts for the Indian subcontinent playing conditions and debutants' performances. 
 			\section*{Results}\label{results}
-		Figure \ref{joshplot} shows the probability distribution for standings based on points accumulated at the end of group stage of ICC CWC 2023, after which the top 4 teams qualify for the semi finals. Figure \ref{table22} shows the predicted probability of winning for teams against each other. Results indicate that India has the highest chance of qualifying for the semis with a 24\% chance of winning the cup. Nevertheless, surprisingly,  Pakistan are the favorites,  with a 52\% chance of winning the trophy if they make it to the semifinals living up to their `unpredictable' tag, setting up a replay of the ICC Champions Trophy Final in 2017 which they won being underdogs against India, South Africa (another  heavy favorite with) are likely to shed their reputation for choking tag and qualify for the semis and have a 9\% chance of winning the tournament.   
+		Figure \ref{joshplot} shows the probability distribution for standings based on points accumulated at the end of group stage of ICC CWC 2023, after which the top 4 teams qualify for the semifinals. Table \ref{table22} shows the predicted probability of winning for teams against each other. Results indicate that India has the highest chance of qualifying for the semis and a 24\% chance of winning the cup. Nevertheless, surprisingly, Pakistan are the favorites, with a 52\% chance of winning the trophy if they make it to the semifinals, living up to their `unpredictable' tag and setting up a replay of the ICC Champions Trophy Final in 2017, which they won despite being underdogs against India. South Africa (another  heavy favorite with) are likely to shed their reputation for choking and qualify for the semis, with a 9\% chance of winning the tournament.   
 			\section*{Conclusion}\label{conclusion}
-		 The method can predict probabilities of winning, which is of interest to fans and could even help set gambling odds. The method can also be adapted to recommend team selection strategies to inform team strategy to increase chances of success in a game. This study could be applied to all league-format cricket tournaments including the Indian Premier League (IPL) -- one of the top 10 most watched sports leagues in the world (average attendance), and the most attended and watched cricket league in the world. The proposed model could be implemented in other sports as well. \\
-		 (Word count 489/500)
+		 The method can predict probabilities of winning, which is of interest to fans and also could inform setting gambling odds. The method can also be adapted to recommend team selection strategies to inform teams' approaches to increase chances of success in a game. This study could be applied to all league-format cricket tournaments, including the Indian Premier League (IPL) -- one of the top 10 most watched sports leagues in the world (average attendance) and the most attended and watched cricket league in the world. The proposed model could be implemented for other sports as well. \\
+		 (Word count 483/500)
 %	\wordcount 
 %\end{abstract}
 \cleardoublepage
