@@ -156,6 +156,7 @@ cricket_sim <- function(country, input_file, output_file, n_runs, strata_sizes){
 base_path <- args[1] 
 selected_country <- args[2]
 n_iter <- args[3]
+sim_number <- args[4]
 
 # Set working directory to proper folder based on selected country
 setwd(paste0(base_path, tolower(str_replace(selected_country, " ", ""))))
@@ -181,7 +182,12 @@ variables <- tibble(
   )
 ) %>% 
   mutate(
-    output_filename = str_replace(input_filename, ".csv", "_result.csv")
+    output_filename = paste0(
+      "../simulation_results/",
+      str_replace(input_filename, ".csv", "_result"),
+      sim_number,
+      ".csv"
+    )
   )
 
 # Pull variables for specific country
