@@ -158,9 +158,6 @@ selected_country <- args[2]
 n_iter <- args[3]
 sim_number <- args[4]
 
-# Set working directory to proper folder based on selected country
-setwd(paste0(base_path, tolower(str_replace(selected_country, " ", ""))))
-
 # Country-specific variables needed for simulation function
 variables <- tibble(
   country = c(
@@ -172,7 +169,6 @@ variables <- tibble(
     "afg.csv", "australia.csv", "bangla.csv", "eng.csv", 
     "india.csv", "irl.csv", "nzl.csv", "pak.csv",
     "saf.csv", "sri.csv", "wi.csv", "zim.csv"
-    
   ),
   # Counts of player types to sample from each team for game rosters
   strata_count = list(
@@ -182,8 +178,17 @@ variables <- tibble(
   )
 ) %>% 
   mutate(
+    # Add folder structure to input file
+    input_filepath = paste0(
+      base_path, 
+      tolower(str_replace(selected_country, " ", "")),
+      "/",
+      input_filename
+    ),
+    # Construct output filepath
     output_filename = paste0(
-      "../simulation_results/",
+      base_path,
+      "simulation_results/",
       str_replace(input_filename, ".csv", "_result"),
       sim_number,
       ".csv"
@@ -196,7 +201,7 @@ variables <- filter(variables, country == selected_country)
 # Run simulation through function
 cricket_sim(
   country = selected_country, 
-  input_file = variables$input_filename, 
+  input_file = variables$input_filepath, 
   output_file = variables$output_filename, 
   n_runs = n_iter, 
   strata_sizes = unlist(variables$strata_count)
