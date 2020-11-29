@@ -3,7 +3,7 @@ library(stringr)
 
 rm(list=ls())
 
-setwd("/Users/quazi/Desktop/cric/simulationfiles/1kruns/individualplayers")
+setwd("/Users/jcliff/Documents/StatsAnalyses/Cricket_Sim/cricket_2020/individual_plots")
 
 beta<-seq(0.01,5000,0.01)
 ############# function ###########
@@ -19,7 +19,7 @@ f<-function(xave,yhs){
 }
 ############# function ###########
 
-inddat<-read.csv("/Users/quazi/Desktop/cric/simulationfiles/1kruns/individualplayers/abd.csv",header=T)
+inddat<-read.csv("abd.csv",header=T)
 head(inddat)
 str(inddat)
 inddat<-inddat[,1:2]
@@ -88,13 +88,14 @@ autoind<-function(){
 }
 
 autoind()
-indsims<-replicate(10,autoind())
+indsims<-replicate(10000,autoind())
 
 ia<-data.frame(matrix(unlist(indsims), nrow=length(indsims), byrow=T))
 ia
 colnames(ia)<-c("v csk","v dc","v kxip",   "v kkr",
                 "v mi","v rr",
                 "v srh")
+head(ia)
 write.csv(ia,'villiers.csv')
 plot(density(ia[,1]))
 max(ia[,])

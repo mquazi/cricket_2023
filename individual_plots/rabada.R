@@ -1,9 +1,9 @@
-Individual plots
+#Individual plots
 library(stringr)
 
 rm(list=ls())
 
-setwd("/Users/quazi/Desktop/cric/simulationfiles/1kruns/individualplayers")
+setwd("/Users/jcliff/Documents/StatsAnalyses/Cricket_Sim/cricket_2020/individual_plots")
 
 beta<-seq(0.01,5000,0.01)
 ############# function ###########
@@ -19,7 +19,7 @@ f<-function(xave,yhs){
 }
 ############# function ###########
 
-inddat<-read.csv("/Users/quazi/Desktop/cric/simulationfiles/1kruns/individualplayers/cwcindividual_plots.csv",header=T)
+inddat<-read.csv("cwcindividual_plots.csv",header=T)
 head(inddat)
 str(inddat)
 inddat<-inddat[,19:20]
@@ -88,7 +88,7 @@ autoind<-function(){
 }
 
 autoind()
-indsims<-replicate(10,autoind())
+indsims<-replicate(10000,autoind())
 
 ia<-data.frame(matrix(unlist(indsims), nrow=length(indsims), byrow=T))
 ia
@@ -97,6 +97,7 @@ colnames(ia)<-c("v Afghanistan","v Australia","v Bangladesh", "v England",
                 "v Ireland","v Kenya","v Netherlands","v New Zealand",
                 "v Pakistan", "v Sri Lanka", "v U.A.E.", 
                 "v West Indies", "v Zimbabwe")
+head(ia)
 write.csv(ia,'rabada.csv')
 plot(density(ia[,5]))
 max(ia[,])
