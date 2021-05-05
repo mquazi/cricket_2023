@@ -31,7 +31,7 @@ f<-function(xave,yhs){
 ############# function ###########
 
 
-inddat<-read.csv("/users/dattap/cricket_2020/australia/australia.csv",header=T)
+inddat<-read.csv("/users/mquazi/cricket_2020/australia/australia.csv",header=T)
 head(inddat)
 str(inddat)
 ttt<-nrow(inddat)/2   #total teams
@@ -131,5 +131,5 @@ colnames(aa)<-c("v Afghanistan","v Bangladesh",   "v England",
                 "v Hong Kong","v India","v Ireland","v Kenya","v Netherlands", "v New Zealand" ,
                 "v Pakistan", "v South Africa", "v Sri Lanka", "v U.A.E.", 
                 "v West Indies", "v Zimbabwe")
-setwd("/users/dattap/cricket_2020/australia/")
+setwd("/users/mquazi/cricket_2020/australia/")
 write.csv(aa,'aa.csv')
